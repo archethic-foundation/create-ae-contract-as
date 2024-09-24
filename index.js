@@ -93,11 +93,15 @@ function createPackageJSON(root, projectName) {
                 "assemblyscript": "^0.27.29"
             },
             "devDependencies": {
+                "visitor-as": "^0.11.4",
                 "@types/jest": "^29.5.12",
                 "@types/node": "^22.1.0",
                 "jest": "^29.7.0",
                 "ts-jest": "^29.2.4",
                 "typescript": "^5.5.4"
+            },
+            "overrides": {
+                "assemblyscript": "$assemblyscript"
             }
         }, null, 2),
     );
