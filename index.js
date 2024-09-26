@@ -85,7 +85,7 @@ function createPackageJSON(root, projectName) {
             "type": "module",
             "scripts": {
                 "build": "aewasm build",
-                "test": "npm run build && jest",
+                "test": "npm run build && vitest",
             },
             "dependencies": {
                 "@archethicjs/ae-contract-as": "^1.0.0",
@@ -94,10 +94,8 @@ function createPackageJSON(root, projectName) {
             },
             "devDependencies": {
                 "visitor-as": "^0.11.4",
-                "@types/jest": "^29.5.12",
                 "@types/node": "^22.1.0",
-                "jest": "^29.7.0",
-                "ts-jest": "^29.2.4",
+                "vitest": "^2.1.1",
                 "typescript": "^5.5.4"
             },
             "overrides": {
@@ -122,8 +120,8 @@ function createAssemblyDir(root) {
 function createTestsDir(root) {
     fs.mkdirSync(path.join(root, "tests"))
     fs.writeFileSync(
-        path.join(root, "tests", "index.spec.ts"),
-        fs.readFileSync(path.join(TPL_DIR, "tests", "index.spec.ts")),
+        path.join(root, "tests", "index.test.ts"),
+        fs.readFileSync(path.join(TPL_DIR, "tests", "index.test.ts")),
     );
 }
 
@@ -135,10 +133,6 @@ function createConfigFiles(root) {
     fs.writeFileSync(
         path.join(root, "tsconfig.json"),
         fs.readFileSync(path.join(TPL_DIR, "tsconfig.json")),
-    );
-    fs.writeFileSync(
-        path.join(root, "jest.config.js"),
-        fs.readFileSync(path.join(TPL_DIR, "jest.config.js")),
     );
 }
 
