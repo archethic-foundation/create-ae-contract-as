@@ -14,7 +14,7 @@ A scaffolding tool for quickly generating smart contract projects for the Archet
 To generate a new project, run the following command:
 
 ```bash
-npm create @archethicjs/create-ae-contract-as my-smart-contract
+npm create @archethicjs/ae-contract-as
 ```
 
 This will create a new folder named my-smart-contract with the necessary files and structure.
