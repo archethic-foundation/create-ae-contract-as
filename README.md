@@ -15,13 +15,21 @@ To generate a new project, run the following command:
 
 ```bash
 npm create @archethicjs/ae-contract-as
+
 ```
 
 This will create a new folder named my-smart-contract with the necessary files and structure.
 
+
+```bash
+npx --yes @archethicjs/create-ae-contract-as -y --name my-contract
+
+```
+
+
 ### Project structure
 ```
-my-smart-contract/
+ae-contract/
 ├── assembly/
 │   ├── index.ts         # Main contract code
 │   ├── tsconfig.json    # Typescript config for AssemblyScript
