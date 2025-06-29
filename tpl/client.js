@@ -60,7 +60,7 @@ async function main() {
     await fundingAccount.sendTransaction(callTx);
 
     // Introduce a small delay before checking the counter again
-    await delay(1500);
+    await delay(2500);
 
     // Display the counter after the transaction
     await displayCounter(archethic, "After");
