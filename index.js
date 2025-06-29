@@ -133,11 +133,12 @@ function createPackageJSON(root, projectName) {
             "devDependencies": {
                 "visitor-as": "^0.11.4",
                 "@types/node": "^22.1.0",
-                "vitest": "^2.1.1",
+                "vitest": "^3.2.4",
                 "typescript": "^5.5.4"
             },
             "overrides": {
-                "assemblyscript": "$assemblyscript"
+                "assemblyscript": "$assemblyscript",
+                "@babel/runtime": "^7.26.10"
             }
         }, null, 2),
     )
