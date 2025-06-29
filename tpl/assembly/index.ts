@@ -29,3 +29,8 @@ export function inc(context: ContextWithParams<State, IncArgs>): ActionResult<St
 
     return new ActionResult<State>().setState(state)
 }
+
+@publicFunction()
+export function getCounter(context: Context<State>): string {
+      return `Current counter is ${context.state.counter}`;
+  }
